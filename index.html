@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./Images/icon.png" rel="icon" type="image/x-icon" />
+    <title>Imad ATOUANI | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-wrapper">
+        <p class="loading-message" aria-live="polite">
+          Chargement du Portfolio
+        </p>
+        <div
+          class="loading-bar"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div class="loading-progress" aria-hidden="true"></div>
+        </div>
+        <p class="loading-percentage" aria-live="polite">0%</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li><a href="#accueil" class="nav-link" index="0">Accueil</a></li>
+          <li>
+            <a href="#competences" class="nav-link" index="1">Compétences</a>
+          </li>
+          <li><a href="#projets" class="nav-link" index="2">Projets</a></li>
+          <li>
+            <a href="#certifications" class="nav-link" index="3"
+              >Certifications</a
+            >
+          </li>
+          <li>
+            <a href="#experiences" class="nav-link" index="4">Expériences</a>
+          </li>
+          <li>
+            <a href="#formations" class="nav-link" index="5">Formations</a>
+          </li>
+          <li><a href="#contact" class="nav-link" index="6">Contact</a></li>
+        </ul>
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+      <canvas id="matrixBackground"></canvas>
+      <div class="hero-content">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h2 class="hero-title">
+              <span class="glitch" data-text="Bienvenue">Bienvenue</span>
+            </h2>
+            <p class="hero-subtitle">
+              Je suis <span class="text-highlight">Imad ATOUANI</span>, étudiant
+              en première année de Bachelor Informatique et Cybersécurité à
+              l'IPSSI Lille
+            </p>
+            <p class="hero-description">
+              Passionné par la sécurité des systèmes d'information, je suis à la
+              recherche d'un
+              <span class="highlight-accent">stage de 4 mois</span> pour mettre
+              en pratique mes connaissances et contribuer activement à vos
+              projets.
+            </p>
+          </div>
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-image">
+                <img src="./Images/pic.jpg" alt="Imad ATOUANI" />
+                <div class="profile-border"></div>
+              </div>
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">À la recherche</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="grid-line h-line"></div>
+        <div class="grid-line v-line"></div>
+        <div class="floating-icon icon-1">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="floating-icon icon-2"><i class="fas fa-lock"></i></div>
+        <div class="floating-icon icon-3"><i class="fas fa-code"></i></div>
+      </div>
+    </section>
+
+    <!-- Competences Section -->
+    <section id="competences" class="competences">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Compétences</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="competences-grid">
+          <!-- Langages -->
+          <div class="competence-category">
+            <h3 class="category-title"><i class="fas fa-code"></i> Langages</h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-icon python">
+                  <i class="fab fa-python"></i>
+                </div>
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon cpp">
+                  <span class="skill-c-plus">C++</span>
+                </div>
+                <span class="skill-name">C/C++</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon php"><i class="fab fa-php"></i></div>
+                <span class="skill-name">PHP</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+                <span class="skill-name">HTML</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon css">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <span class="skill-name">CSS</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon js">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <span class="skill-name">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks & Tools -->
+          <div class="competence-category">
+            <h3 class="category-title">
+              <i class="fas fa-tools"></i> Frameworks & Tools
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-icon vuejs"><i class="fab fa-vuejs"></i></div>
+                <span class="skill-name">Vue.JS</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon firebase">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <span class="skill-name">Firebase</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                <span class="skill-name">Git/Github</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon vscode"><i class="fas fa-code"></i></div>
+                <span class="skill-name">VS Code</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon mysql">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="skill-name">MySQL Workbench</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon latex">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <span class="skill-name">LaTeX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="competence-category">
+            <h3 class="category-title">
+              <i class="fas fa-brain"></i> Soft Skills
+            </h3>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-icon soft">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="skill-name">Rigueur & Analyse</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon soft"><i class="fas fa-users"></i></div>
+                <span class="skill-name">Esprit d'équipe</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon soft">
+                  <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <span class="skill-name">Résolution de problème</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon soft"><i class="fas fa-random"></i></div>
+                <span class="skill-name">Adaptation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="projets">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projets</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="projets-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Images/ChatApp.jpg" alt="ChatApp" />
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/ImadAtouani/ChatApp"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">ChatApp</h3>
+              <p class="project-description">
+                Plateforme sociale complète développée avec Vue.JS et Firebase.
+                Fonctionnalités de partage, messagerie et authentification.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Vue.JS</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">WebDev</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Images/DevGate.png" alt="DevGate" />
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/ImadAtouani/DevGate"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">DevGate</h3>
+              <p class="project-description">
+                Plateforme de suivi des projets et compétences pour les
+                développeurs. Intégration de Firebase pour l'authentification et
+                la gestion des données.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Vue.JS</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">WebDev</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./Images/Shifumi.jpg" alt="Shifumi" />
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/ImadAtouani/Shifumi"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Shifumi</h3>
+              <p class="project-description">
+                Jeu de Pierre-Papier-Ciseaux développé en HTML, CSS et
+                JavaScript. Interface utilisateur interactive et animations
+                fluides.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certifications</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="certifications-grid-2col">
+          <div class="cert-card">
+            <div class="cert-image">
+              <img src="./Images/ANSSI.png" alt="MOOC SecNumacadémie" />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">MOOC SecNumacadémie</h3>
+              <p class="cert-issuer">ANSSI</p>
+              <a href="./PDF/ANSSI.pdf" class="cert-link" target="_blank">
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img src="./Images/CNIL.png" alt="Atelier RGPD" />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Atelier RGPD</h3>
+              <p class="cert-issuer">CNIL</p>
+              <a href="./PDF/CNIL.pdf" class="cert-link" target="_blank">
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/Linux Unhatched Badge.png"
+                alt="Linux Unhatched"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Linux Unhatched</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/Linux Unhatched.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/Linux Essentials Badge.png"
+                alt="Linux Essentials"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Linux Essentials</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/Linux Essentials.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/Python Essentials 1 Badge.png"
+                alt="Python Essentials 1"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Python Essentials 1</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/Python Essentials 1.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/Python Essentials 2 Badge.png"
+                alt="Python Essentials 2"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Python Essentials 2</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/Python Essentials 2.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/JavaScript Essentials 1 Badge.png"
+                alt="JavaScript Essentials 1"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">JavaScript Essentials 1</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/JavaScript Essentials 1.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/JavaScript Essentials 2 Badge.png"
+                alt="JavaScript Essentials 2"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">JavaScript Essentials 2</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/JavaScript Essentials 2.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-image">
+              <img
+                src="./Images/Introduction to Cybersecurity Badge.png"
+                alt="Introduction to Cybersecurity"
+              />
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Introduction to Cybersecurity</h3>
+              <p class="cert-issuer">CISCO Networking Academy</p>
+              <a
+                href="./PDF/Introduction to Cybersecurity.pdf"
+                class="cert-link"
+                target="_blank"
+              >
+                <i class="fas fa-certificate"></i> Voir le certificat
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="experiences">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Expériences Professionnelles</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Stage - Développement Web</h3>
+                <span class="timeline-date">Février 2025 - Juin 2025</span>
+              </div>
+              <div class="timeline-company">
+                <i class="fas fa-building"></i> CGG (Conseil Groupe Gestion) -
+                Casablanca
+              </div>
+              <p class="timeline-description">
+                Réalisation d'un réseau social complet avec Vue.JS et Firebase.
+                Mise en œuvre de fonctionnalités avancées incluant
+                l'authentification, le stockage cloud et la synchronisation en
+                temps réel.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Vue.JS</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">WebDev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="formations">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Diplômes & Formations</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline-alternating">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">
+                  Bachelor en Informatique et Cybersécurité
+                </h3>
+                <span class="timeline-date"
+                  >Septembre 2025 - À aujourd'hui</span
+                >
+              </div>
+              <div class="timeline-company">
+                <i class="fas fa-graduation-cap"></i> IPSSI - Lille
+              </div>
+              <p class="timeline-description">
+                Formation avancée en informatique et cybersécurité couvrant les
+                langages modernes, les bases de données, le développement web et
+                la sécurité des systèmes.
+              </p>
+              <ul class="timeline-list">
+                <li>Développement avancé des langages de programmation</li>
+                <li>Conception et optimisation de bases de données</li>
+                <li>Développement web avancé et architectures modernes</li>
+                <li>Algorithmique avancée et structures de données</li>
+                <li>Cybersécurité : principes et mise en œuvre</li>
+                <li>Réseaux : conception et administration</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">
+                  Cycle Préparatoire en Informatique
+                </h3>
+                <span class="timeline-date">Septembre 2023 - Janvier 2025</span>
+              </div>
+              <div class="timeline-company">
+                <i class="fas fa-graduation-cap"></i> Université Mohammed VI
+                Polytechnique - Benguérir
+              </div>
+              <p class="timeline-description">
+                Formation fondamentale en informatique avec focus sur les
+                principes de base de la programmation et du développement.
+              </p>
+              <ul class="timeline-list">
+                <li>Fondements des langages de programmation</li>
+                <li>Initiation aux bases de données</li>
+                <li>Fondements du développement web</li>
+                <li>Fondements algorithmiques</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">
+                  Baccalauréat - Sciences Mathématiques
+                </h3>
+                <span class="timeline-date">Septembre 2022 - Juin 2023</span>
+              </div>
+              <div class="timeline-company">
+                <i class="fas fa-graduation-cap"></i> Lycée Alpha - Kénitra
+              </div>
+              <p class="timeline-description">
+                Obtention du Baccalauréat avec mention très bien. Spécialité
+                Sciences Mathématiques B.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Contact & Liens</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-grid-3col">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <a href="mailto:imadatouani270@gmail.com" class="contact-link"
+              >imadatouani270@gmail.com</a
+            >
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Téléphone</h3>
+            <a href="tel:+33661747774" class="contact-link"
+              >+33 6 61 74 77 74</a
+            >
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <a
+              href="https://linkedin.com/in/imad-atouani/"
+              class="contact-link"
+              target="_blank"
+              >Imad ATOUANI</a
+            >
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3>GitHub</h3>
+            <a
+              href="https://github.com/ImadAtouani/"
+              class="contact-link"
+              target="_blank"
+              >ImadAtouani</a
+            >
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3>CV Résumé</h3>
+            <a href="./PDF/CV of Imad.pdf" class="contact-link" download
+              >Télécharger CV</a
+            >
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Localisation</h3>
+            <p class="contact-info">59000 Lille, France</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 Imad ATOUANI | Portfolio</p>
+          <div class="footer-links">
+            <a
+              href="https://github.com/ImadAtouani"
+              target="_blank"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/imad-atouani/"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:imadatouani270@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
